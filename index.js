@@ -1,13 +1,13 @@
 // const _ = require('lodash')
 const {
+  FIND
+} = require('./lib/constants')
+
+const {
   hasPermission,
   authIsDisabled,
   sanitizeDocumentList
 } = require('./lib/helpers')
-
-const {
-  FIND
-} = require('./lib/constants')
 
 const PermissionDeniedError = require('./lib/PermissionDeniedError')
 
