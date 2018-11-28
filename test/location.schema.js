@@ -1,24 +1,24 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const locationSchema = new mongoose.Schema({
   lat: Number,
-  lon: Number,
-});
+  lon: Number
+})
 
 locationSchema.permissions = {
   admin: {
     read: ['lat', 'lon'],
     write: ['lat', 'lon'],
-    create: true,
+    create: true
   },
   owner: {
     read: ['lat', 'lon'],
-    remove: true,
+    remove: true
   },
   script: {
     create: true,
-    write: ['lat', 'lon'],
-  },
-};
+    write: ['lat', 'lon']
+  }
+}
 
-module.exports = locationSchema;
+module.exports = locationSchema
